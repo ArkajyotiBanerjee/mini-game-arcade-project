@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Game Arcade</title>
+
+  <!-- Google Fonts: subtle retro-friendly -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png"/>
+</head>
+<body>
+
+  <main class="landing-container">
+
+    <!-- ================= HEADER ================= -->
+    <header class="page-header">
+      <h1>Mini Game Arcade</h1>
+      <p class="subtitle">
+        Pick a game, relax, and enjoy a classic little challenge.
+      </p>
+    </header>
+
+    <!-- ================= GAME CARDS ================= -->
+    <section class="games-section">
+
+      <!-- ========= HANGMAN CARD ========= -->
+      <article class="game-card">
+        <h2>Hangman</h2>
+        <p class="tagline">
+          Guess the word before the man is complete.
+        </p>
+
+        <details class="instructions">
+          <summary>How to Play</summary>
+          <ul>
+            <li>Guess letters to reveal the hidden word</li>
+            <li>Each wrong guess brings you closer to losing by "hanging the man"</li>
+            <li>Complete the word before attempts run out !!!</li>
+          </ul>
+        </details>
+
+        <!-- EDIT THIS LINK IF PATH CHANGES -->
+        <a class="play-button" href="game2/index.html">
+          Play Hangman
+        </a>
+      </article>
+
+      <!-- ========= DICE GAME CARD ========= -->
+      <article class="game-card">
+        <h2>DON'T "DIE"</h2>
+        <p class="tagline">
+          A simple two-player game of risk and luck.
+        </p>
+
+        <details class="instructions">
+          <summary>How to Play</summary>
+          <ul>
+            <li>Two players take turns rolling a die</li>
+            <li>Rolling a 1 resets the current turn score to 0 & passes the turn</li>
+            <li>Hold to save points and pass the turn</li>
+            <li>First player to reach the target score of 50 wins</li>
+          </ul>
+        </details>
+
+        <!-- EDIT THIS LINK IF PATH CHANGES -->
+        <a class="play-button" href="game1/index.html">
+          Play DON'T "DIE"
+        </a>
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

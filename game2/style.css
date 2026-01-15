@@ -1,0 +1,155 @@
+/* ======================================================
+   BACKGROUND
+   Soft warm beige + ultra-light dotted texture
+   Texture uses radial-gradient at very low opacity
+   ====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f3efe6;
+  background-image:
+    url(background.jpg);
+  background-size: cover;
+  
+}
+
+/* ======================================================
+   APP LAYOUT (Scoped to avoid launcher conflicts)
+   ====================================================== */
+.app-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ======================================================
+   HANGMAN IMAGE CARD
+   Feels like a framed game sprite
+   ====================================================== */
+.hangman-container {
+  width: 210px;
+  height: 270px;
+  background: #faf8f2;
+  border-radius: 14px;
+  border: 1px solid #ddd6c8;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hangman-container img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.35s ease; /* fade handled here */
+}
+
+/* ======================================================
+   GAME CARD
+   ====================================================== */
+.game-container {
+  width: 360px;
+  padding: 2rem;
+
+  background: #fffdf7;
+  border-radius: 16px;
+  border: 1px solid #e2dccd;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+  font-family: "IBM Plex Mono", system-ui, sans-serif;
+}
+
+/* ======================================================
+   TYPOGRAPHY
+   ====================================================== */
+.game-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#status-message {
+  min-height: 24px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Word display is the visual star */
+#word-display {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.7rem;
+  letter-spacing: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ======================================================
+   KEYBOARD
+   ====================================================== */
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin: 1.4rem 0;
+}
+
+#keyboard button {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 0.95rem;
+
+  background: #f5f1e8;
+  border: 1px solid #d8d1c2;
+  border-radius: 6px;
+
+  padding: 0.45rem;
+  cursor: pointer;
+
+  box-shadow: 0 2px 0 #cfc8b8;
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    background-color 0.15s ease;
+}
+
+#keyboard button:hover {
+  background: #ede7da;
+}
+
+#keyboard button:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #cfc8b8;
+}
+
+#keyboard button:disabled {
+  background: #e6e1d6;
+  color: #9c9688;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ======================================================
+   RESTART BUTTON
+   ====================================================== */
+#restart-btn {
+  font-family: "IBM Plex Mono", sans-serif;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+
+  border-radius: 8px;
+  border: 1px solid #d8d1c2;
+  background: #f5f1e8;
+
+  cursor: pointer;
+  box-shadow: 0 3px 0 #cfc8b8;
+}
+
+#restart-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}

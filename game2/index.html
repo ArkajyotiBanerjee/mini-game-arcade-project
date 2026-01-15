@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman</title>
+
+  <!-- Google Fonts
+       - Inter: clean retro-friendly sans
+       - JetBrains Mono: readable monospace for word display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon_hangman.png"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app-container">
+
+    <!-- LEFT: HANGMAN IMAGE CARD -->
+    <section class="hangman-container">
+      <img id="hangman-image" src="hangman-0.png" alt="Hangman Progress" />
+    </section>
+
+    <!-- RIGHT: GAME CARD -->
+    <section class="game-container">
+      <h1 class="game-title">Hangman</h1>
+
+      <div id="status-message"></div>
+
+      <div id="word-display"></div>
+
+      <div id="attempts-display">
+        Wrong Attempts: <span id="wrong-count">0</span>
+      </div>
+
+      <div id="keyboard"></div>
+
+      <button id="restart-btn">Restart Game</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
