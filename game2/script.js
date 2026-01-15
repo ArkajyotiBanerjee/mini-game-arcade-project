@@ -8,7 +8,11 @@ const WORD_LIST = [
   "browser",
   "developer",
   "function",
-  "variable"
+  "variable",
+  "object",
+  "codechef",
+  "dakshin",
+  "vitchennai"
 ];
 
 const MAX_WRONG_ATTEMPTS = 6;
