@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-/* LAYOUT */
+
 main {
   position: relative;
   width: 100rem;
@@ -46,7 +46,7 @@ main {
   transition: all 0.75s;
 }
 
-/* ELEMENTS */
+
 .name {
   position: relative;
   font-size: 4rem;
@@ -100,7 +100,7 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
+
 .btn {
   position: absolute;
   left: 50%;
@@ -171,12 +171,9 @@ main {
   display: none;
 }
 
-/* ===============================
-   WIN / LOSE OVERLAY TEXT
-   =============================== */
 
 .player {
-  position: relative; /* required for absolute centering */
+  position: relative; 
 }
 
 .result-text {
@@ -201,13 +198,12 @@ main {
   text-align: center;
 }
 
-/* Winner styling */
 .player--winner .result-text {
   background: rgba(199, 54, 95, 0.85);
   color: #fff;
 }
 
-/* Loser styling */
+
 .player--loser .result-text {
   background: rgba(0, 0, 0, 0.75);
   color: #ddd;

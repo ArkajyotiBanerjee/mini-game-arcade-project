@@ -1,6 +1,3 @@
-/***********************
- * GAME CONFIGURATION
- ***********************/
 const WORD_LIST = [
   "javascript",
   "hangman",
@@ -16,39 +13,21 @@ const WORD_LIST = [
 ];
 
 const MAX_WRONG_ATTEMPTS = 6;
-
-/***********************
- * GAME STATE
- ***********************/
 let selectedWord = "";
 let guessedLetters = [];
 let wrongAttempts = 0;
 let gameOver = false;
 
-/***********************
- * DOM ELEMENTS
- ***********************/
 const wordDisplay = document.getElementById("word-display");
 const keyboard = document.getElementById("keyboard");
 const wrongCountDisplay = document.getElementById("wrong-count");
 const statusMessage = document.getElementById("status-message");
 const restartButton = document.getElementById("restart-btn");
 
-/* HANGMAN IMAGE ELEMENT */
 const hangmanImage = document.getElementById("hangman-image");
 
-/***********************
- * INITIALIZATION
- ***********************/
 initGame();
 
-/***********************
- * FUNCTIONS
- ***********************/
-
-/**
- * Initializes or restarts the game
- */
 function initGame() {
   selectedWord = getRandomWord();
   guessedLetters = [];
@@ -58,22 +37,18 @@ function initGame() {
   statusMessage.textContent = "";
   wrongCountDisplay.textContent = wrongAttempts;
 
-  updateHangmanImage(); // ← reset image
+  updateHangmanImage();
   renderWord();
   renderKeyboard();
 }
 
-/**
- * Select random word
- */
+
 function getRandomWord() {
   const index = Math.floor(Math.random() * WORD_LIST.length);
   return WORD_LIST[index];
 }
 
-/**
- * Render hidden word
- */
+
 function renderWord() {
   const display = selectedWord
     .split("")
@@ -84,9 +59,7 @@ function renderWord() {
   checkWinCondition();
 }
 
-/**
- * Create on-screen keyboard
- */
+
 function renderKeyboard() {
   keyboard.innerHTML = "";
 
@@ -102,9 +75,7 @@ function renderKeyboard() {
   }
 }
 
-/**
- * Handle letter guess
- */
+
 function handleGuess(letter) {
   if (gameOver) return;
 
@@ -114,7 +85,7 @@ function handleGuess(letter) {
     wrongAttempts++;
     wrongCountDisplay.textContent = wrongAttempts;
 
-    updateHangmanImage(); // ← IMAGE PROGRESSION HAPPENS HERE
+    updateHangmanImage(); 
     checkLoseCondition();
   }
 
@@ -122,20 +93,13 @@ function handleGuess(letter) {
   renderKeyboard();
 }
 
-/**
- * ==========================
- * HANGMAN IMAGE PROGRESSION
- * ==========================
- * Updates image based on wrongAttempts
- */
+
 function updateHangmanImage() {
   hangmanImage.src = `hangman-${wrongAttempts}.png`;
   
 }
 
-/**
- * Win condition
- */
+
 function checkWinCondition() {
   const won = selectedWord
     .split("")
@@ -148,9 +112,7 @@ function checkWinCondition() {
   }
 }
 
-/**
- * Lose condition
- */
+
 function checkLoseCondition() {
   if (wrongAttempts >= MAX_WRONG_ATTEMPTS) {
     statusMessage.textContent = `💀 You Lost! Word was: ${selectedWord}.        Just noob things lol.`;
@@ -159,16 +121,10 @@ function checkLoseCondition() {
   }
 }
 
-/**
- * Disable keyboard
- */
 function disableKeyboard() {
   keyboard.querySelectorAll("button").forEach(btn => {
     btn.disabled = true;
   });
 }
 
-/***********************
- * EVENTS
- ***********************/
 restartButton.addEventListener("click", initGame);
