@@ -21,17 +21,13 @@ body {
   align-items: center;
 }
 
-/* ======================================================
-   LANDING CONTAINER
-   ====================================================== */
+
 .landing-container {
   width: min(900px, 92%);
   padding: 2.5rem 1rem;
 }
 
-/* ======================================================
-   HEADER
-   ====================================================== */
+
 .page-header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -52,21 +48,16 @@ body {
   font-weight: 400;
 }
 
-/* ======================================================
-   GAME CARDS SECTION
-   ====================================================== */
+
 .games-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-/* ======================================================
-   GAME CARD
-   ====================================================== */
 .game-card {
   background: #fffdf7;
-  background: rgba(255, 255, 255, 0.318); /* translucent */
+  background: rgba(255, 255, 255, 0.318); 
   backdrop-filter: blur(10px);
 
   border-radius: 16px;
@@ -102,9 +93,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* ======================================================
-   INSTRUCTIONS (DETAILS / SUMMARY)
-   ====================================================== */
 .instructions summary {
   cursor: pointer;
   font-weight: 500;
@@ -121,9 +109,6 @@ body {
   margin-bottom: 0.3rem;
 }
 
-/* ======================================================
-   PLAY BUTTON
-   ====================================================== */
 .play-button {
   margin-top: auto;
   text-align: center;
